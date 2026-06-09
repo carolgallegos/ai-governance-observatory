@@ -1,0 +1,186 @@
+[
+  {
+    "iso_code": "MX",
+    "name": "Mexico",
+    "region": "Americas",
+    "latitude": 23.6345,
+    "longitude": -102.5528,
+    "profile": {
+      "strategy_title": "National Agenda for Artificial Intelligence (2020, updated pathways)",
+      "strategy_date": "2020-01-01",
+      "regulation_summary": "Sectoral and data-protection rules apply; no comprehensive AI law yet. Privacy anchored in LFPDPPP. Active discussion on AI sandboxes and federal coordination.",
+      "responsible_bodies": "CONACYT / SECIHTI, Ministry of Economy, INAI (data protection), digital transformation units",
+      "priorities": ["Digital inclusion", "Ethical AI in public sector", "SME adoption", "Spanish-language NLP", "Healthcare and education applications"],
+      "regulatory_approach": "Principles-based + sectoral regulation",
+      "privacy": "Federal data protection law; consent and purpose limitation; cross-border transfer rules",
+      "generative_ai": "Emerging guidance; public-sector pilots with transparency expectations",
+      "education": "STEM and AI skills in higher education; national digital skills programs",
+      "risks": "Bias in public services, labor displacement, weak enforcement capacity, cybersecurity"
+    },
+    "frameworks": [
+      {"framework_type": "strategy", "title": "National AI Agenda", "effective_date": "2020-01-01", "source_url": "https://www.gob.mx/"}
+    ],
+    "agri": {"regulation": 3.2, "investment": 3.0, "education": 3.5, "open_data": 3.8, "research": 3.4, "methodology_note": "Curated seed; see METHODOLOGY.md"}
+  },
+  {
+    "iso_code": "US",
+    "name": "United States",
+    "region": "Americas",
+    "latitude": 37.0902,
+    "longitude": -95.7129,
+    "profile": {
+      "strategy_title": "Executive Order on Safe, Secure, and Trustworthy AI (2023) + NIST AI RMF",
+      "strategy_date": "2023-10-30",
+      "regulation_summary": "Sectoral federal approach; state-level AI laws emerging. NIST AI Risk Management Framework widely adopted voluntarily. FTC and agencies active on consumer protection.",
+      "responsible_bodies": "NIST, White House OSTP, FTC, sector regulators (FDA, SEC, etc.)",
+      "priorities": ["Innovation leadership", "National security", "Workforce", "Standards and testing", "Competition"],
+      "regulatory_approach": "Sectoral + voluntary standards + emerging state law",
+      "privacy": "No federal comprehensive privacy law; state laws (CA, etc.)",
+      "generative_ai": "EO requirements for federal use; industry commitments; watermarking R&D",
+      "education": "NSF AI institutes; workforce reskilling initiatives",
+      "risks": "Dual-use AI, election integrity, discrimination, IP, critical infrastructure"
+    },
+    "frameworks": [
+      {"framework_type": "guideline", "title": "NIST AI Risk Management Framework", "effective_date": "2023-01-26", "source_url": "https://www.nist.gov/itl/ai-risk-management-framework"}
+    ],
+    "agri": {"regulation": 3.8, "investment": 4.8, "education": 4.5, "open_data": 4.2, "research": 5.0, "methodology_note": "Curated seed; see METHODOLOGY.md"}
+  },
+  {
+    "iso_code": "FR",
+    "name": "France",
+    "region": "Europe",
+    "latitude": 46.2276,
+    "longitude": 2.2137,
+    "profile": {
+      "strategy_title": "National Strategy for Artificial Intelligence (France 2030)",
+      "strategy_date": "2021-01-01",
+      "regulation_summary": "EU AI Act applies as Member State. National AI Commission (CNNum). Strong focus on sovereign compute and public-sector AI.",
+      "responsible_bodies": "CNNum, DINUM, ANSSI, CNIL",
+      "priorities": ["Sovereign AI", "Public sector transformation", "Talent and research", "Trusted AI in health"],
+      "regulatory_approach": "Risk-based (EU AI Act) + national implementation",
+      "privacy": "GDPR + CNIL enforcement; DPIA for high-risk processing",
+      "generative_ai": "EU AI Act GPAI obligations; national transparency initiatives",
+      "education": "AI majors expansion; lifelong learning vouchers",
+      "risks": "Compliance costs for SMEs, concentration in Big Tech, bias in welfare systems"
+    },
+    "frameworks": [
+      {"framework_type": "law", "title": "EU AI Act (applicable in France)", "effective_date": "2024-08-01", "source_url": "https://artificialintelligenceact.eu/"}
+    ],
+    "agri": {"regulation": 4.5, "investment": 4.2, "education": 4.3, "open_data": 4.0, "research": 4.6, "methodology_note": "Curated seed; see METHODOLOGY.md"}
+  },
+  {
+    "iso_code": "DE",
+    "name": "Germany",
+    "region": "Europe",
+    "latitude": 51.1657,
+    "longitude": 10.4515,
+    "profile": {
+      "strategy_title": "AI Strategy Update (2020) + Digital Strategy",
+      "strategy_date": "2020-12-01",
+      "regulation_summary": "EU AI Act + strong data protection tradition. Federal ministries coordinate research and industrial policy. Ethics Council input on automated decision-making.",
+      "responsible_bodies": "BMWK, BMBF, BSI, data protection authorities (Länder + federal)",
+      "priorities": ["Industry 4.0", "Trustworthy AI", "SME Mittelstand support", "Green AI"],
+      "regulatory_approach": "Risk-based EU framework + strict privacy culture",
+      "privacy": "GDPR gold standard enforcement; works councils and co-determination in workplace AI",
+      "generative_ai": "EU GPAI rules; industry codes; public research on foundation models",
+      "education": "Dual education system integration; AI in vocational training",
+      "risks": "Over-regulation perception, innovation lag vs US/China, bureaucratic fragmentation"
+    },
+    "frameworks": [
+      {"framework_type": "strategy", "title": "German AI Strategy", "effective_date": "2020-12-01", "source_url": "https://www.bmwk.de/"}
+    ],
+    "agri": {"regulation": 4.6, "investment": 4.0, "education": 4.4, "open_data": 4.1, "research": 4.7, "methodology_note": "Curated seed; see METHODOLOGY.md"}
+  },
+  {
+    "iso_code": "BR",
+    "name": "Brazil",
+    "region": "Americas",
+    "latitude": -14.235,
+    "longitude": -51.9253,
+    "profile": {
+      "strategy_title": "Brazilian Artificial Intelligence Strategy (EBIA)",
+      "strategy_date": "2021-04-01",
+      "regulation_summary": "LGPD for data protection. AI legal framework under legislative debate. National AI plan linked to digital government.",
+      "responsible_bodies": "MCTI, CGU, ANPD (data protection authority)",
+      "priorities": ["Agriculture and environment", "Public health", "Digital government", "Inclusive innovation"],
+      "regulatory_approach": "Rights-based data law + evolving AI-specific rules",
+      "privacy": "LGPD aligned with GDPR principles; ANPD enforcement ramping up",
+      "generative_ai": "Draft bills address liability and transparency; agency guidance emerging",
+      "education": "National STEM programs; university AI research networks",
+      "risks": "Digital divide, enforcement gaps, misinformation in elections"
+    },
+    "frameworks": [
+      {"framework_type": "strategy", "title": "EBIA - Brazilian AI Strategy", "effective_date": "2021-04-01", "source_url": "https://www.gov.br/"}
+    ],
+    "agri": {"regulation": 3.5, "investment": 3.2, "education": 3.6, "open_data": 4.0, "research": 3.8, "methodology_note": "Curated seed; see METHODOLOGY.md"}
+  },
+  {
+    "iso_code": "CA",
+    "name": "Canada",
+    "region": "Americas",
+    "latitude": 56.1304,
+    "longitude": -106.3468,
+    "profile": {
+      "strategy_title": "Pan-Canadian AI Strategy + AIDA proposal trajectory",
+      "strategy_date": "2017-03-01",
+      "regulation_summary": "Voluntary AI Code of Practice; proposed Artificial Intelligence and Data Act (AIDA) under C-27 debate. Strong research hubs (Mila, Vector, Amii).",
+      "responsible_bodies": "ISED, Office of the Privacy Commissioner, CIFAR",
+      "priorities": ["Research excellence", "Responsible AI", "Government modernization", "Indigenous data sovereignty dialogue"],
+      "regulatory_approach": "Principles + proposed risk-based federal law",
+      "privacy": "PIPEDA reform discussions; provincial laws (Quebec Law 25)",
+      "generative_ai": "Voluntary commitments; AIDA high-impact system obligations if enacted",
+      "education": "CIFAR chairs; national AI scholarship programs",
+      "risks": "Regulatory uncertainty during AIDA debate, brain drain to US, indigenous data rights"
+    },
+    "frameworks": [
+      {"framework_type": "guideline", "title": "Voluntary Code of Conduct on Responsible AI", "effective_date": "2023-09-01", "source_url": "https://www.canada.ca/"}
+    ],
+    "agri": {"regulation": 3.9, "investment": 4.0, "education": 4.2, "open_data": 4.3, "research": 4.8, "methodology_note": "Curated seed; see METHODOLOGY.md"}
+  },
+  {
+    "iso_code": "GB",
+    "name": "United Kingdom",
+    "region": "Europe",
+    "latitude": 55.3781,
+    "longitude": -3.436,
+    "profile": {
+      "strategy_title": "AI Regulation White Paper / pro-innovation approach",
+      "strategy_date": "2023-03-01",
+      "regulation_summary": "Cross-sectoral principles for regulators instead of single AI law. AI Safety Institute. GDPR UK retained law.",
+      "responsible_bodies": "DSIT, ICO, sector regulators, AI Safety Institute",
+      "priorities": ["Safety institute leadership", "Pro-innovation regulation", "Public sector pilots", "International summits"],
+      "regulatory_approach": "Contextual regulator-led principles",
+      "privacy": "UK GDPR + ICO AI guidance",
+      "generative_ai": "Safety testing; copyright and IP policy active debate",
+      "education": "Alan Turing Institute; school computing curriculum",
+      "risks": "Regulatory fragmentation across sectors, adequacy with EU data flows"
+    },
+    "frameworks": [
+      {"framework_type": "guideline", "title": "AI Regulation White Paper", "effective_date": "2023-03-29", "source_url": "https://www.gov.uk/"}
+    ],
+    "agri": {"regulation": 4.0, "investment": 4.1, "education": 4.0, "open_data": 4.4, "research": 4.5, "methodology_note": "Curated seed; see METHODOLOGY.md"}
+  },
+  {
+    "iso_code": "EU",
+    "name": "European Union",
+    "region": "Supranational",
+    "latitude": 50.8503,
+    "longitude": 4.3517,
+    "profile": {
+      "strategy_title": "EU Coordinated Plan on AI + AI Act",
+      "strategy_date": "2024-08-01",
+      "regulation_summary": "EU AI Act: risk-based binding regulation for AI systems in the EU market. Digital Omnibus updates expected. Horizon Europe funds AI research.",
+      "responsible_bodies": "European Commission (DG CNECT), EU AI Office, national competent authorities",
+      "priorities": ["Trustworthy human-centric AI", "Single market harmonization", "SME sandboxes", "Fundamental rights"],
+      "regulatory_approach": "Risk-based binding horizontal regulation",
+      "privacy": "GDPR interaction with AI Act; special categories and DPIA",
+      "generative_ai": "GPAI model obligations: transparency, copyright policy, systemic risk for frontier models",
+      "education": "Digital Education Action Plan; Erasmus+ digital skills",
+      "risks": "Innovation friction, compliance complexity, enforcement heterogeneity across MS"
+    },
+    "frameworks": [
+      {"framework_type": "law", "title": "EU Artificial Intelligence Act", "effective_date": "2024-08-01", "source_url": "https://artificialintelligenceact.eu/"}
+    ],
+    "agri": {"regulation": 4.8, "investment": 4.3, "education": 4.1, "open_data": 4.2, "research": 4.4, "methodology_note": "Supranational bloc; curated seed"}
+  }
+]

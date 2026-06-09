@@ -1,0 +1,65 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: agri-db
+    environment:
+      POSTGRES_USER: agri
+      POSTGRES_PASSWORD: agri_secret
+      POSTGRES_DB: ai_governance
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/scripts/init_pgvector.sql:/docker-entrypoint-initdb.d/01_pgvector.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agri -d ai_governance"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: agri-api
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://agri:agri_secret@db:5432/ai_governance
+      CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health')\""]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    depends_on:
+      db:
+        condition: service_healthy
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: agri-web
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+      API_INTERNAL_URL: http://api:8000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

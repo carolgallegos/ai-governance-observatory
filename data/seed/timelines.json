@@ -1,0 +1,42 @@
+{
+  "MX": [
+    {"year": 2018, "title": "AI in Digital Strategy discussions", "event_type": "strategy", "description": "Early federal coordination on digital transformation and AI enablers."},
+    {"year": 2020, "title": "National Agenda for Artificial Intelligence", "event_type": "strategy", "description": "Published national AI agenda with ethics and public-sector use cases."},
+    {"year": 2023, "title": "Data protection enforcement emphasis", "event_type": "regulation", "description": "INAI and sector regulators increase scrutiny of automated decision systems."}
+  ],
+  "US": [
+    {"year": 2019, "title": "Executive Order on AI leadership", "event_type": "strategy", "description": "Federal prioritization of AI R&D and standards."},
+    {"year": 2023, "title": "NIST AI RMF v1.0 adoption push", "event_type": "guideline", "description": "Risk management framework widely referenced by industry and agencies."},
+    {"year": 2023, "title": "Safe, Secure, and Trustworthy AI EO", "event_type": "regulation", "description": "Cross-agency requirements for federal AI procurement and safety."}
+  ],
+  "FR": [
+    {"year": 2018, "title": "National AI Strategy (Phase 1)", "event_type": "strategy", "description": "€1.5B plan for research, talent, and open data in AI."},
+    {"year": 2021, "title": "France 2030 — AI & open data expansion", "event_type": "investment", "description": "Sovereign compute and public-sector AI transformation accelerated."},
+    {"year": 2024, "title": "EU AI Act national implementation prep", "event_type": "regulation", "description": "CNNum and sector regulators align with risk-based EU obligations."}
+  ],
+  "DE": [
+    {"year": 2018, "title": "German AI Strategy launched", "event_type": "strategy", "description": "Research, skills, and trustworthy AI in industry and government."},
+    {"year": 2020, "title": "AI Strategy update & data ethics", "event_type": "strategy", "description": "Strengthened Mittelstand support and public-sector guidelines."},
+    {"year": 2024, "title": "EU AI Act transposition planning", "event_type": "regulation", "description": "Federal-Länder coordination on high-risk system oversight."}
+  ],
+  "BR": [
+    {"year": 2020, "title": "LGPD in force", "event_type": "regulation", "description": "Comprehensive data protection underpins AI accountability."},
+    {"year": 2021, "title": "Brazilian AI Strategy (EBIA)", "event_type": "strategy", "description": "National plan linking innovation to inclusion and public services."},
+    {"year": 2024, "title": "AI bill debate in Congress", "event_type": "regulation", "description": "Legislative proposals on transparency and liability for AI systems."}
+  ],
+  "CA": [
+    {"year": 2017, "title": "Pan-Canadian AI Strategy", "event_type": "strategy", "description": "CIFAR-led research clusters (Mila, Vector, Amii)."},
+    {"year": 2022, "title": "Bill C-27 introduced (AIDA)", "event_type": "regulation", "description": "Proposed federal AI and data obligations for high-impact systems."},
+    {"year": 2023, "title": "Voluntary AI Code of Conduct", "event_type": "guideline", "description": "Industry commitments on responsible development pending legislation."}
+  ],
+  "GB": [
+    {"year": 2021, "title": "National AI Strategy", "event_type": "strategy", "description": "Pro-innovation roadmap across defence, health, and climate."},
+    {"year": 2023, "title": "AI Regulation White Paper", "event_type": "guideline", "description": "Regulator-led principles instead of single horizontal AI statute."},
+    {"year": 2024, "title": "AI Safety Institute expansion", "event_type": "research", "description": "Frontier model testing and international safety partnerships."}
+  ],
+  "EU": [
+    {"year": 2018, "title": "Coordinated Plan on AI v1", "event_type": "strategy", "description": "Member State alignment on investment and ethics."},
+    {"year": 2021, "title": "AI Act political agreement process", "event_type": "regulation", "description": "Risk-based framework negotiated across institutions."},
+    {"year": 2024, "title": "AI Act entry into force", "event_type": "regulation", "description": "Binding obligations phased in for GPAI and high-risk systems."}
+  ]
+}
