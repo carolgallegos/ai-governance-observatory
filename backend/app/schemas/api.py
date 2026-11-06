@@ -118,7 +118,7 @@ class CitationOut(BaseModel):
     document: str
     page: Optional[int] = None
     section: str
-    confidence: float
+    confidence: Optional[float] = None
     excerpt: Optional[str] = None
 
 

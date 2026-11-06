@@ -96,9 +96,8 @@ def _section_label(chunk: DocumentChunk) -> str:
 
 
 def score_to_confidence(similarity: float) -> float:
-    """Map cosine similarity (typically 0–1) to display confidence %."""
-    pct = max(0.0, min(1.0, (similarity + 1) / 2 if similarity < 0 else similarity)) * 100
-    return round(min(99.0, max(52.0, pct)), 1)
+    """Cosine similarity as a percentage, clipped to 0–100."""
+    return round(max(0.0, min(1.0, similarity)) * 100, 1)
 
 
 def build_citations(db: Session, scored_chunks: list[tuple[float, DocumentChunk]]) -> list[dict]:
@@ -208,7 +207,7 @@ def _curated_citations(db: Session, message: str, country_codes: list[str] | Non
                 "document": fw.title,
                 "page": None,
                 "section": fw.framework_type.replace("_", " ").title(),
-                "confidence": 88.0,
+                "confidence": None,
                 "excerpt": f"Official {fw.framework_type} framework (curated seed).",
             }
         )
@@ -218,7 +217,7 @@ def _curated_citations(db: Session, message: str, country_codes: list[str] | Non
                 "document": "AI Governance Observatory — curated intelligence",
                 "page": None,
                 "section": "Country profiles & AGRI",
-                "confidence": 85.0,
+                "confidence": None,
                 "excerpt": "Response based on seeded national policy profiles. Upload PDFs for document-level citations.",
             }
         )

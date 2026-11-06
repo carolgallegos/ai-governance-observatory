@@ -71,7 +71,7 @@ export type Citation = {
   document: string;
   page: number | null;
   section: string;
-  confidence: number;
+  confidence: number | null;
   excerpt?: string;
 };
 

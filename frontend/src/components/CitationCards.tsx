@@ -2,7 +2,7 @@ export type Citation = {
   document: string;
   page: number | null;
   section: string;
-  confidence: number;
+  confidence: number | null;
   excerpt?: string;
 };
 
@@ -33,12 +33,14 @@ export function CitationCards({ citations }: { citations: Citation[] }) {
                   </>
                 )}
               </div>
-              <div className="citation-confidence">
-                <span className={`citation-badge citation-badge-${c.confidence >= 80 ? "high" : c.confidence >= 55 ? "mid" : "low"}`}>
-                  {confidenceLabel(c.confidence)}
-                </span>
-                <span className="citation-pct">{c.confidence}% retrieval score</span>
-              </div>
+              {c.confidence != null && (
+                <div className="citation-confidence">
+                  <span className={`citation-badge citation-badge-${c.confidence >= 80 ? "high" : c.confidence >= 55 ? "mid" : "low"}`}>
+                    {confidenceLabel(c.confidence)}
+                  </span>
+                  <span className="citation-pct">{c.confidence}% retrieval score</span>
+                </div>
+              )}
               {c.excerpt && <blockquote className="citation-excerpt">{c.excerpt}</blockquote>}
             </div>
           </li>
