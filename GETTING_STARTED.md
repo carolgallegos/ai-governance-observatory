@@ -1,7 +1,5 @@
 # Getting started
 
-The full project lives in this folder. To publish, see [GITHUB_PUBLISH.md](./GITHUB_PUBLISH.md).
-
 ## Option A — Docker (recommended)
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/).
