@@ -16,9 +16,13 @@ def _mock_embed_text(text: str, dim: int) -> list[float]:
     return vec.tolist()
 
 
+def uses_live_embeddings() -> bool:
+    return settings.embedding_provider == "openai" and bool(settings.openai_api_key)
+
+
 async def embed_text(text: str) -> list[float]:
     dim = settings.embedding_dimensions
-    if settings.embedding_provider == "openai" and settings.openai_api_key:
+    if uses_live_embeddings():
         from openai import AsyncOpenAI
 
         client = AsyncOpenAI(api_key=settings.openai_api_key)

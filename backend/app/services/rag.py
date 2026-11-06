@@ -5,8 +5,8 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.entities import Document, DocumentChunk
-from app.services.embeddings import embed_text
-from app.services.llm import generate_completion
+from app.services.embeddings import embed_text, uses_live_embeddings
+from app.services.llm import generate_completion, uses_live_model
 
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 150
@@ -156,7 +156,10 @@ async def chat_with_rag(db: Session, message: str, country_codes: list[str] | No
         country = db.scalar(select(Country).where(Country.iso_code == country_codes[0].upper()))
         country_id = country.id if country else None
 
-    scored = await retrieve_chunks_scored(db, message, top_k=5, country_id=country_id)
+    # Placeholder embeddings are hash-based, so their nearest chunks are arbitrary.
+    scored: list[tuple[float, DocumentChunk]] = []
+    if uses_live_embeddings():
+        scored = await retrieve_chunks_scored(db, message, top_k=5, country_id=country_id)
     if scored:
         chunks = [c for _, c in scored]
         context = "\n\n---\n\n".join(
@@ -179,6 +182,7 @@ async def chat_with_rag(db: Session, message: str, country_codes: list[str] | No
         "citations": citations,
         "sources": citations,
         "mode": "rag" if scored else "curated",
+        "demo": not uses_live_model(),
     }
 
 

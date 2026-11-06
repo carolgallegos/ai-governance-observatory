@@ -127,6 +127,7 @@ class ChatResponse(BaseModel):
     citations: list[CitationOut]
     sources: list[dict[str, Any]]
     mode: str
+    demo: bool = False
 
 
 class SimilarityResponse(BaseModel):

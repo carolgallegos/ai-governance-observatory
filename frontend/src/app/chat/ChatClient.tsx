@@ -15,6 +15,7 @@ type ChatMessage = {
   role: "user" | "assistant";
   text: string;
   citations?: Citation[];
+  demo?: boolean;
 };
 
 export function ChatClient() {
@@ -31,7 +32,7 @@ export function ChatClient() {
       const res = await api.chat(text);
       setMessages((m) => [
         ...m,
-        { role: "assistant", text: res.answer, citations: res.citations ?? res.sources },
+        { role: "assistant", text: res.answer, citations: res.citations ?? res.sources, demo: res.demo },
       ]);
     } catch {
       setMessages((m) => [
@@ -66,6 +67,11 @@ export function ChatClient() {
         )}
         {messages.map((msg, i) => (
           <div key={i} className={`msg ${msg.role}`}>
+            {msg.demo && (
+              <p style={{ color: "var(--muted)", fontSize: "0.8rem", marginBottom: "0.4rem" }}>
+                Demo mode: no model key is set, so this is a fixed sample answer, not a reply to your question.
+              </p>
+            )}
             {msg.text}
             {msg.role === "assistant" && msg.citations && <CitationCards citations={msg.citations} />}
           </div>

@@ -169,7 +169,7 @@ export const api = {
       }),
     }),
   chat: (message: string, countries?: string[]) =>
-    fetchApi<{ answer: string; citations: Citation[]; sources: Citation[]; mode: string }>("/api/v1/chat", {
+    fetchApi<{ answer: string; citations: Citation[]; sources: Citation[]; mode: string; demo: boolean }>("/api/v1/chat", {
       method: "POST",
       body: JSON.stringify({ message, countries }),
     }),

@@ -3,6 +3,14 @@ import json
 from app.core.config import settings
 
 
+def uses_live_model() -> bool:
+    if settings.llm_provider == "openai":
+        return bool(settings.openai_api_key)
+    if settings.llm_provider == "anthropic":
+        return bool(settings.anthropic_api_key)
+    return False
+
+
 async def generate_completion(system: str, user: str) -> str:
     if settings.llm_provider == "openai" and settings.openai_api_key:
         from openai import AsyncOpenAI
